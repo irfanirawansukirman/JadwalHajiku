@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Jadwal Hajiku</string>
+    <string name="jadwal_hajiku">Jadwal Hajiku</string>
+
+    <string name="font_muli_reg">fonts/Muli.ttf</string>
+</resources>

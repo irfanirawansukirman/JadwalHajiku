@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group
+        android:checkableBehavior="single"
+
+        tools:ignore="MissingPrefix">
+        <item
+            android:id="@+id/home_perkiraan_haji"
+            fontPath="@string/font_muli_reg"
+            android:checked="true"
+            android:icon="@mipmap/ic_keberangkatan"
+            android:title="Perkiraan Keberangkatan Haji" />
+
+        <item
+            android:id="@+id/home_waiting_list"
+            fontPath="@string/font_muli_reg"
+            android:checked="false"
+            android:icon="@mipmap/ic_waiting_list"
+            android:title="Waiting List" />
+
+        <item
+            android:id="@+id/home_penyelenggara"
+            fontPath="@string/font_muli_reg"
+            android:checked="false"
+            android:icon="@mipmap/ic_penyelenggara"
+            android:title="Daftar Penyelenggara Umroh" />
+    </group>
+</menu>
