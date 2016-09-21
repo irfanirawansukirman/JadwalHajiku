@@ -5,7 +5,7 @@
 
         <variable
             name="vm"
-            type="com.irfanirawansukirman.jadwalhajiku.mvvm.hajjschedule.HajjScheduleVM"/>
+            type="com.irfanirawansukirman.jadwalhajiku.mvvm.hajjschedule.HajjScheduleVM" />
     </data>
 
     <LinearLayout
@@ -18,7 +18,55 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem Ipsum"
-            android:textColor="@color/colorPrimaryText" />
+            android:text="@string/perkiraan_berangkat"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="20sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginTop="8dp"
+            android:background="@color/colorPrimaryText" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/nomor_porsi"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_edittext_normal"
+            android:hint="Misal : 120120120"
+            android:imeOptions="actionNext"
+            android:inputType="number"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/perkiraan_berangkat_dapat_berubah_sesuai_dengan_regulasi"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="14sp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorAccent"
+            android:foreground="?selectableItemBackgroundBorderless"
+            android:onClick="@{(v)->vm.onShowResult(v)}"
+            android:text="@string/cari"
+            android:textColor="@color/whiteApp"
+            android:textSize="14sp" />
     </LinearLayout>
 </layout>

@@ -3,4 +3,17 @@
     <string name="jadwal_hajiku">Jadwal Hajiku</string>
 
     <string name="font_muli_reg">fonts/Muli.ttf</string>
+    <string name="perkiraan_berangkat">Perkiraan Berangkat Haji</string>
+    <string name="nomor_porsi">Nomor Porsi*</string>
+    <string name="perkiraan_berangkat_dapat_berubah_sesuai_dengan_regulasi">*Perkiraan berangkat dapat berubah, sesuai dengan regulasi.</string>
+    <string name="cari">Cari</string>
+    <string name="data_peserta_calon_haji">Data Peserta Calon Haji</string>
+    <string name="nomor_porsi_">Nomor Porsi</string>
+    <string name="nama">Nama</string>
+    <string name="kabupaten_kota">Kabupaten/Kota</string>
+    <string name="provinsi">Provinsi</string>
+    <string name="kuota_provinsi_kab_kota_khusus">Kuota Provinsi/Kab/Kota/Khusus</string>
+    <string name="perkiraan_berangkat_hijriah">Perkiraan Berangkat Hijriah</string>
+    <string name="perkiraan_berangkat_tahun_masehi">Perkiraan Berangkat Tahun Masehi</string>
+    <string name="tutup">Tutup</string>
 </resources>
