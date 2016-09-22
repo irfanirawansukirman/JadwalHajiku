@@ -3,8 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:padding="@dimen/material_padding">
+    android:paddingLeft="@dimen/material_padding"
+    android:paddingRight="@dimen/material_padding"
+    android:paddingTop="@dimen/material_padding">
 
     <TextView
         android:layout_width="match_parent"
@@ -19,214 +22,242 @@
         android:layout_marginTop="8dp"
         android:background="@color/colorPrimaryText" />
 
-    <ScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:clipToPadding="false"
-        android:layout_height="wrap_content"
-        android:paddingTop="24dp">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
+        <ScrollView
+            android:id="@+id/scrollItem"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:clipToPadding="false"
+            android:paddingTop="24dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nomor_porsi_"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": 1010101010" />
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nomor_porsi_"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_nomor_porsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": 1010101010" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/nama"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": Ujang Kastelo" />
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nama"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_nama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": Ujang Kastelo" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/kabupaten_kota"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:ellipsize="end"
-                    android:singleLine="true"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": Kab. Bandung Barat" />
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kabupaten_kota"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_kab_kota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:ellipsize="end"
+                        android:singleLine="true"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": Kab. Bandung Barat" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/provinsi"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": Jawa Barat" />
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/provinsi"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_provinsi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": Jawa Barat" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/kuota_provinsi_kab_kota_khusus"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": 1000" />
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kuota_provinsi_kab_kota_khusus"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_kuota"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": 1000" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="Posisi Porsi Pada Kuota Provinsi/Kab/Kota/Khusus"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": 1010101010" />
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            </LinearLayout>
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="Posisi Porsi Pada Kuota Provinsi/Kab/Kota/Khusus"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_posisi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": 1010101010" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/perkiraan_berangkat_hijriah"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": 1442" />
-            </LinearLayout>
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/material_padding"
-                android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perkiraan_berangkat_hijriah"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
 
-                <TextView
-                    android:layout_width="108dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/perkiraan_berangkat_tahun_masehi"
-                    android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp" />
+                    <TextView
+                        android:id="@+id/txt_hijriyah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": 1442" />
+                </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="@dimen/material_padding"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="108dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/perkiraan_berangkat_tahun_masehi"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/txt_masehi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/colorPrimaryText"
+                        android:textSize="14sp"
+                        tools:text=": 2020" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/btn_dialog_close"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginBottom="@dimen/material_padding"
+                    android:layout_marginTop="24dp"
+                    android:background="@drawable/round_button_grey"
+                    android:foreground="?selectableItemBackgroundBorderless"
+                    android:text="@string/tutup"
                     android:textColor="@color/colorPrimaryText"
-                    android:textSize="14sp"
-                    tools:text=": 2020" />
-
+                    android:textSize="14sp" />
             </LinearLayout>
+        </ScrollView>
 
-            <Button
-                android:id="@+id/btn_dialog_close"
-                android:layout_width="match_parent"
-                android:layout_height="40dp"
-                android:layout_marginTop="24dp"
-                android:background="@color/colorAccent"
-                android:foreground="?selectableItemBackgroundBorderless"
-                android:text="@string/tutup"
-                android:textColor="@color/whiteApp"
-                android:textSize="14sp" />
-        </LinearLayout>
-    </ScrollView>
+        <id.gits.baso.BasoProgressView
+            android:id="@+id/myprogress"
+            android:layout_margin="@dimen/material_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:progressText="Memuat Data . . ."
+            app:defaultErrorText="Terjadi kesalahan.\n Mohon periksa kembali jaringan internet anda."
+            app:retryText="Memuat Ulang"/>
+
+    </RelativeLayout>
+
+
 </LinearLayout>
