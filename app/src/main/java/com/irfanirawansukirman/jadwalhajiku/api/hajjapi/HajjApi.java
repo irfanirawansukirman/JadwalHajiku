@@ -1,6 +1,7 @@
 package com.irfanirawansukirman.jadwalhajiku.api.hajjapi;
 
 import com.irfanirawansukirman.jadwalhajiku.api.service.PerkiraanBerangkatService;
+import com.irfanirawansukirman.jadwalhajiku.api.service.WaitinglistService;
 import com.irfanirawansukirman.jadwalhajiku.util.Constant;
 
 import java.util.concurrent.TimeUnit;
@@ -17,6 +18,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class HajjApi {
     private Retrofit mRetrofit;
     private PerkiraanBerangkatService mPerkiraanBerangkatService;
+    private WaitinglistService mWaitinglistService;
 
     public HajjApi(){
         OkHttpClient client = new OkHttpClient.Builder()
@@ -36,5 +38,10 @@ public class HajjApi {
     public PerkiraanBerangkatService getPerkiraanBerangkatService(){
         mPerkiraanBerangkatService = mRetrofit.create(PerkiraanBerangkatService.class);
         return mPerkiraanBerangkatService;
+    }
+
+    public WaitinglistService getWaitinglistService(){
+        mWaitinglistService = mRetrofit.create(WaitinglistService.class);
+        return mWaitinglistService;
     }
 }

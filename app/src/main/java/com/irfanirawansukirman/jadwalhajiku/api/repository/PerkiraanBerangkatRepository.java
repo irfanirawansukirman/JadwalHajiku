@@ -17,7 +17,7 @@ public class PerkiraanBerangkatRepository {
         this.mHajjApi = mHajjApi;
     }
 
-    public Observable<BaseDao<PerkiraanBerangkatDao>> getDataKeberangkatan(String mView,
+    public Observable<PerkiraanBerangkatDao> getDataKeberangkatan(String mView,
                                                                            String mNomorPorsi,
                                                                            String mToken) {
         return mHajjApi.getPerkiraanBerangkatService().getDataPerkiraan(mView, mNomorPorsi, mToken);

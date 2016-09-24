@@ -115,7 +115,7 @@ public class HajjScheduleDialogFragment extends DialogFragment {
                 Constant.API_KEY)
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observers<BaseDao<PerkiraanBerangkatDao>>() {
+                .subscribe(new Observers<PerkiraanBerangkatDao>() {
                     @Override
                     public void onApiResultCompleted() {
 
@@ -128,9 +128,11 @@ public class HajjScheduleDialogFragment extends DialogFragment {
                     }
 
                     @Override
-                    public void onApiResultOk(BaseDao<PerkiraanBerangkatDao> mData) {
-                        Log.wtf("NAMA CALON HAJI ", mData.getData().getNama());
-                        if (mData.getData() != null) {
+                    public void onApiResultOk(PerkiraanBerangkatDao mData) {
+                        if (mData.getStatus().equals("error")) {
+                            Toast.makeText(getContext(), "Data peserta tidak ditemukan", Toast.LENGTH_SHORT).show();
+                            HajjScheduleDialogFragment.this.dismiss();
+                        } else {
                             mNomorPorsiCalon.setText(": " + mData.getData().getNomor_porsi());
                             mNama.setText(": " + mData.getData().getNama());
                             mKabKota.setText(": " + mData.getData().getKabupaten_kota());
@@ -139,8 +141,8 @@ public class HajjScheduleDialogFragment extends DialogFragment {
                             mPorsi.setText(": " + mData.getData().getPosisi_porsi_pada_kuota_provinsi_kab_kota_khusus());
                             mTahunHijriyah.setText(": " + mData.getData().getPerkiraan_berangkat_hijriah());
                             mTahunMasehi.setText(": " + mData.getData().getPerkiraan_berangkat_tahun_masehi());
-                            stopProgress();
                         }
+                        stopProgress();
                     }
                 }));
     }

@@ -14,7 +14,7 @@ import rx.Observable;
 
 public interface PerkiraanBerangkatService {
     @GET("/api/info-haji")
-    Observable<BaseDao<PerkiraanBerangkatDao>> getDataPerkiraan(
+    Observable<PerkiraanBerangkatDao> getDataPerkiraan(
             @Query("view") String mView,
             @Query("np") String mNomorPorsi,
             @Query("k") String token
