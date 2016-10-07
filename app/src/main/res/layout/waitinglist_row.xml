@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.irfanirawansukirman.jadwalhajiku.mvvm.waitinglist.WaitinglistRowVM" />
+    </data>
+
+    <LinearLayout
+        android:background="@color/whiteApp"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/ic_location" />
+
+            <TextView
+                android:layout_width="96dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center"
+                android:text="@{vm.mProvince}"
+                android:textColor="@color/colorPrimaryText"
+                android:textSize="16sp"
+                tools:text="Lorem"/>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:background="@color/colorPrimaryText" />
+
+            <RelativeLayout
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_description_white">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:padding="8dp"
+                    android:src="@mipmap/ic_description" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="@dimen/material_padding"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/round_description_grey"></LinearLayout>
+    </LinearLayout>
+</layout>

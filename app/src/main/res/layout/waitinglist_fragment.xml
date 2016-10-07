@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <data>
 
@@ -8,15 +10,26 @@
             type="com.irfanirawansukirman.jadwalhajiku.mvvm.waitinglist.WaitinglistVM" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <TextView
-            android:gravity="center"
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rec_waitinglist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:adapter="@{vm.mAdapter}"
+            app:layoutManager="@{vm.mLinearLayoutManager}"
+            tools:listitem="@layout/waitinglist_row" />
+
+        <id.gits.baso.BasoProgressView
+            android:id="@+id/baso"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Waiting list"/>
-    </LinearLayout>
+            android:gravity="center"
+            app:defaultErrorText="Terjadi kesalahan. Cek koneksi internet anda."
+            app:progressText="Memuat Data"
+            app:retriable="true"
+            app:retryText="Memuat Data Ulang" />
+    </RelativeLayout>
 </layout>
